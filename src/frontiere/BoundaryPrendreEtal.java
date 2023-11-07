@@ -16,16 +16,16 @@ public class BoundaryPrendreEtal {
 	public void prendreEtal(String nomVendeur) {
 		if (!controlPrendreEtal.verifierIdentite(nomVendeur)) {
 			StringBuilder chaine = new StringBuilder();
-			chaine.append("Je suis désolé " + nomVendeur
-					+ " mais il faut être un habitant de notre village pour commencer ici.");
+			chaine.append("Je suis dÃ©solÃ© " + nomVendeur
+					+ " mais il faut Ãªtre un habitant de notre village pour commencer ici.");
 			System.out.println(chaine.toString());
 		} else {
 			StringBuilder chaine = new StringBuilder();
-			chaine.append("Bonjour " + nomVendeur + " ,je vais regarder si je peux vous trouver un étal.");
+			chaine.append("Bonjour " + nomVendeur + " ,je vais regarder si je peux vous trouver un Ã©tal.");
 			System.out.println(chaine.toString());
 			if (!controlPrendreEtal.resteEtals()) {
 				StringBuilder chaine2 = new StringBuilder();
-				chaine2.append("Désolé " + nomVendeur + " ,je n'ai plus d'étal qui ne soit pas déjà occupé.");
+				chaine2.append("DÃ©solÃ© " + nomVendeur + " ,je n'ai plus d'Ã©tal qui ne soit pas dÃ©jÃ  occupÃ©.");
 				System.out.println(chaine2.toString());
 			} else {
 				installerVendeur(nomVendeur);
@@ -35,8 +35,7 @@ public class BoundaryPrendreEtal {
 
 	private void installerVendeur(String nomVendeur) {
 		StringBuilder chaine = new StringBuilder();
-		chaine.append("C'est parfait, il me reste un étal pour vous !\n" + "Il me faudrait quelques renseignements :\n"
-				+ "Quel produit souhaitez-vous vendre ?");
+		chaine.append("C'est parfait, il me reste un Ã©tal pour vous !\nIl me faudrait quelques renseignements :\nQuel produit souhaitez-vous vendre ?");
 		System.out.println(chaine.toString());
 		String produit = scan.next();
 		StringBuilder nb = new StringBuilder();
@@ -45,7 +44,7 @@ public class BoundaryPrendreEtal {
 		int numeroEtal = controlPrendreEtal.prendreEtal(nomVendeur, produit, nbProduit);
 		if (numeroEtal != -1) {
 			StringBuilder reponse = new StringBuilder();
-			reponse.append("Le vendeur " + nomVendeur + " s'est installé à l'étal n°" + (numeroEtal+1));
+			reponse.append("Le vendeur " + nomVendeur + " s'est installï¿½ ï¿½ l'ï¿½tal nï¿½" + (numeroEtal+1));
 			System.out.println(reponse.toString());
 		}
 	}

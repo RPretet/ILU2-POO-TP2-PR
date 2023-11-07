@@ -18,7 +18,10 @@ public class BoundaryLibererEtal {
 			String[] donneesEtal = controlLibererEtal.libererEtal(nomVendeur);
 			if (Boolean.valueOf(donneesEtal[0])) {
 				StringBuilder chaine = new StringBuilder();
-				chaine.append("Vous avez vendu " + donneesEtal[4] + " sur " + donneesEtal[3] + " " + donneesEtal[2]);
+				chaine.append("Vous avez vendu " + donneesEtal[4] + " sur " + donneesEtal[3] + " "
+				+ donneesEtal[2] + ".\n");
+				chaine.append("Au revoir " + nomVendeur + ", passez une bonne journée.");
+				System.out.println(chaine.toString());
 			}
 		}
 	}
