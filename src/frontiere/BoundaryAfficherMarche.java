@@ -13,9 +13,9 @@ public class BoundaryAfficherMarche {
 		String[] infosMarche = controlAfficherMarche.donnerInfosMarche();
 		StringBuilder chaine = new StringBuilder();
 		if (infosMarche.length == 0) {
-			chaine.append("Le marchÃ© est vide, revenez plus tard.");
+			chaine.append("Le marché est vide, revenez plus tard.");
 		} else {
-			chaine.append(nomAcheteur + ", vous trouverez au marchÃ© :\n");
+			chaine.append(nomAcheteur + ", vous trouverez au marché :\n");
 			String vendeur, quantite, produit;
 			for (int i = 0; i < infosMarche.length; i++) {
 				vendeur = infosMarche[i];
