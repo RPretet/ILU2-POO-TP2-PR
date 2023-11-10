@@ -24,7 +24,9 @@ class ControlAfficherVillageTest {
 
 	@Test
 	void testControlAfficherVillage() {
-		fail("Not yet implemented");
+		ControlAfficherVillage controlAfficherVillage = new ControlAfficherVillage(village);
+		assertNotNull(controlAfficherVillage);
+		assertEquals(controlAfficherVillage.donnerNomVillage(),village.getNom());
 	}
 
 	@Test
@@ -47,12 +49,15 @@ class ControlAfficherVillageTest {
 
 	@Test
 	void testDonnerNomVillage() {
-		fail("Not yet implemented");
+		ControlAfficherVillage controlAfficherVillage = new ControlAfficherVillage(village);
+		assertEquals(controlAfficherVillage.donnerNomVillage(),"le village des irréductibles");
+		assertNotEquals(controlAfficherVillage.donnerNomVillage(),"le village romain");
 	}
 
 	@Test
 	void testDonnerNbEtals() {
-		fail("Not yet implemented");
+		ControlAfficherVillage controlAfficherVillage = new ControlAfficherVillage(village);
+		assertEquals(controlAfficherVillage.donnerNbEtals(),5);
 	}
 
 }
